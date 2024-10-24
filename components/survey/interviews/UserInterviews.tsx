@@ -1,9 +1,8 @@
-// src/components/survey/interviews/UserInterviews.tsx
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Avatar } from '@/components/ui/avatar';
 import { ChevronDown, User, MessageCircle, Calendar } from 'lucide-react';
-import type { Interview } from '@/types';
+import { Interview } from '@/types';
 
 const interviews: Interview[] = [
   {
@@ -47,7 +46,7 @@ export function UserInterviews() {
   const filteredInterviews = interviews.filter(interview => {
     const matchesSearch = interview.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       interview.quote.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      interview.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      interview.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
     const matchesGeneration = filterGeneration ? interview.generation === filterGeneration : true;
     
@@ -163,7 +162,7 @@ export function UserInterviews() {
                         {interview.quote}
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        {interview.tags.map((tag, tagIndex) => (
+                        {interview.tags.map((tag: string, tagIndex: number) => (
                           <span
                             key={tagIndex}
                             className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
@@ -192,17 +191,4 @@ export function UserInterviews() {
       </motion.div>
     </div>
   );
-}
-
-// Also update the types file with:
-// src/types/index.ts (add this interface)
-export interface Interview {
-  name: string;
-  generation: string;
-  role: string;
-  experience: string;
-  avatar: string;
-  quote: string;
-  tags: string[];
-  date: string;
 }

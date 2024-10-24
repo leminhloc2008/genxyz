@@ -68,20 +68,32 @@ export const interviews: Interview[] = [
   {
     name: 'Le Thi Hong Nhung',
     generation: 'Gen Y',
+    role: 'Marketing Manager',
+    experience: '8 years',
     avatar: '/placeholder.svg?height=40&width=40',
-    quote: 'It\'s hard to communicate because of the generational differences. Gen X bosses always say, "We used to do it this way before, why change now?" while Gen Z colleagues want to follow every new trend. I often feel caught in the middle, struggling to bridge the gap.'
+    quote: "It's hard to communicate because of the generational differences. Gen X bosses always say, \"We used to do it this way before, why change now?\" while Gen Z colleagues want to follow every new trend. I often feel caught in the middle, struggling to bridge the gap.",
+    tags: ['Communication', 'Workplace', 'Change Management'],
+    date: 'March 2024'
   },
   {
     name: 'Le Thi Nga',
     generation: 'Gen X',
+    role: 'Senior Director',
+    experience: '15 years',
     avatar: '/placeholder.svg?height=40&width=40',
-    quote: 'I find it challenging to keep up with the rapidly changing slang used by younger generations, especially in professional settings. The company has hired many young employees who often propose ideas that I find too risky. It makes me feel outdated.'
+    quote: 'I find it challenging to keep up with the rapidly changing slang used by younger generations, especially in professional settings. The company has hired many young employees who often propose ideas that I find too risky. It makes me feel outdated.',
+    tags: ['Professional Environment', 'Language Barrier', 'Risk Assessment'],
+    date: 'March 2024'
   },
   {
     name: 'Nguyen Duc Minh',
     generation: 'Gen Z',
+    role: 'Software Developer',
+    experience: '2 years',
     avatar: '/placeholder.svg?height=40&width=40',
-    quote: 'I love programming and want to pursue a career in IT, but older generations don\'t understand my passion. They think I\'m just playing games all day. Sometimes I use internet slang or memes in conversations, and they don\'t get the references, which leads to misunderstandings.'
+    quote: "I love programming and want to pursue a career in IT, but older generations don't understand my passion. They think I'm just playing games all day. Sometimes I use internet slang or memes in conversations, and they don't get the references, which leads to misunderstandings.",
+    tags: ['Technology', 'Career Growth', 'Cultural References'],
+    date: 'March 2024'
   }
 ];
 

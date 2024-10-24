@@ -32,8 +32,12 @@ export interface Feature {
   export interface Interview {
     name: string;
     generation: string;
+    role: string;
+    experience: string;
     avatar: string;
     quote: string;
+    tags: string[];
+    date: string;
   }
   
   export interface CustomTooltipProps {
