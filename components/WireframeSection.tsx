@@ -1,43 +1,45 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+'use client'
+
+import React from 'react'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const wireframeBlocks = [
   {
-    title: "Daily AI-Generated Prompts",
-    description: "Engage with our community through AI-curated daily topics that spark meaningful conversations and connections.",
-    image: "/assets/Translation.png",
-    features: [
-      "Dynamic prompt generation",
-      "Community-driven discussions",
-      "Daily fresh content"
-    ]
-  },
-  {
-    title: "Interactive Feed Experience",
-    description: "A redesigned feed interface that makes sharing and discovering moments more intuitive and engaging than ever.",
+    title: "Light Mode Interface",
+    description: "Clean and minimalist design for optimal readability in well-lit environments.",
     image: "/assets/SlangsW.png",
     features: [
-      "Seamless navigation",
-      "Rich media support",
-      "Real-time interactions"
+      "Crisp, clear typography",
+      "Intuitive layout",
+      "Easy-to-use input field"
     ]
   },
   {
-    title: "Enhanced Sharing Features",
-    description: "Express yourself freely with our improved sharing capabilities, designed to encourage spontaneous and casual interactions.",
-    image: "/assets/Prompt.png",
+    title: "Dark Mode Experience",
+    description: "Sleek dark theme for comfortable viewing in low-light conditions.",
+    image: "/assets/SlangsW.png",
     features: [
-      "Quick share options",
-      "Multiple media formats",
-      "Instant feedback"
+      "Eye-friendly color scheme",
+      "Vibrant accent colors",
+      "Customizable AI avatar"
+    ]
+  },
+  {
+    title: "Seamless Mode Transition",
+    description: "Effortless switching between light and dark modes for personalized user experience.",
+    image: "/assets/SlangsW.png",
+    features: [
+      "Smooth animation",
+      "Persistent layout",
+      "Adaptive UI elements"
     ]
   }
 ];
 
 export function WireframeSection() {
   return (
-    <div className="py-24 bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="py-24 bg-[#0c0f1a] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -62,43 +64,28 @@ export function WireframeSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid md:grid-cols-2 gap-12 items-center"
+              className="flex flex-col md:flex-row gap-12 items-center"
             >
               {/* Image Container */}
               <motion.div 
-                className="relative aspect-square rounded-2xl overflow-hidden bg-gray-800"
+                className="relative w-full md:w-2/3 rounded-2xl overflow-hidden"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 via-transparent to-purple-500/20 z-10" />
-                
                 <Image
                   src={block.image}
                   alt={block.title}
-                  layout="fill"
-                  objectFit="cover"
+                  width={1000}
+                  height={500}
+                  layout="responsive"
+                  objectFit="contain"
                   className="transform transition-transform duration-500 hover:scale-105"
-                />
-
-                {/* Decorative Elements */}
-                <motion.div
-                  className="absolute top-4 right-4 w-20 h-20 rounded-full bg-blue-500/20 blur-xl"
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.5, 0.8, 0.5],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
                 />
               </motion.div>
 
               {/* Content Container */}
               <motion.div 
-                className="space-y-6"
+                className="w-full md:w-1/3 space-y-6"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -127,31 +114,11 @@ export function WireframeSection() {
                     </motion.li>
                   ))}
                 </ul>
-
-                {/* Interactive Element */}
-                <motion.div
-                  className="w-full h-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full mt-8"
-                  whileHover={{ scaleX: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <motion.div
-                    className="h-full w-1/3 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"
-                    animate={{
-                      x: ["0%", "200%"],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      ease: "easeInOut",
-                    }}
-                  />
-                </motion.div>
               </motion.div>
             </motion.div>
           ))}
         </div>
       </div>
     </div>
-  );
+  )
 }
