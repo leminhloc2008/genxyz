@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, AlertCircle, ThumbsDown, ThumbsUp, Zap, ChevronRight, Box, Globe, Brain, Target, Layers } from 'lucide-react';
+import { Search, AlertCircle, ThumbsDown, ThumbsUp, Zap, ChevronRight, Globe, Brain, Target, Layers } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function Component() {

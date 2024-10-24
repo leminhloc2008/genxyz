@@ -8,7 +8,7 @@ const wireframeBlocks = [
   {
     title: "Light Mode Interface",
     description: "Clean and minimalist design for optimal readability in well-lit environments.",
-    image: "/assets/SlangsW.png",
+    image: "/assets/Translation.png",
     features: [
       "Crisp, clear typography",
       "Intuitive layout",
@@ -18,7 +18,7 @@ const wireframeBlocks = [
   {
     title: "Dark Mode Experience",
     description: "Sleek dark theme for comfortable viewing in low-light conditions.",
-    image: "/assets/SlangsW.png",
+    image: "/assets/Prompt.png",
     features: [
       "Eye-friendly color scheme",
       "Vibrant accent colors",
