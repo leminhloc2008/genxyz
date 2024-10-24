@@ -6,7 +6,7 @@ const wireframeBlocks = [
   {
     title: "Daily AI-Generated Prompts",
     description: "Engage with our community through AI-curated daily topics that spark meaningful conversations and connections.",
-    image: "/assets/wireframe1.png",
+    image: "/assets/Translation.png",
     features: [
       "Dynamic prompt generation",
       "Community-driven discussions",
@@ -16,7 +16,7 @@ const wireframeBlocks = [
   {
     title: "Interactive Feed Experience",
     description: "A redesigned feed interface that makes sharing and discovering moments more intuitive and engaging than ever.",
-    image: "/assets/wireframe2.png",
+    image: "/assets/SlangsW.png",
     features: [
       "Seamless navigation",
       "Rich media support",
@@ -26,7 +26,7 @@ const wireframeBlocks = [
   {
     title: "Enhanced Sharing Features",
     description: "Express yourself freely with our improved sharing capabilities, designed to encourage spontaneous and casual interactions.",
-    image: "/assets/wireframe3.png",
+    image: "/assets/Prompt.png",
     features: [
       "Quick share options",
       "Multiple media formats",
