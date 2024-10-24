@@ -1,5 +1,3 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
-
 import React from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { CheckCircle } from 'lucide-react'
@@ -117,7 +115,7 @@ function MockupShowcase({ imageUrl, reverse = false }: MockupShowcaseProps): JSX
     offset: ["start end", "end start"]
   });
 
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [2.4, 3, 2.4]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 0.3]);
   const rotateY = useTransform(scrollYProgress, [0, 0.5, 1], [-15, 0, 15]);
   const translateY = useTransform(scrollYProgress, [0, 0.5, 1], [100, 0, -100]);
@@ -205,32 +203,6 @@ function MockupShowcase({ imageUrl, reverse = false }: MockupShowcaseProps): JSX
               ease: "easeInOut",
               delay: 1,
             }}
-          />
-        </motion.div>
-
-        {/* Interactive Elements */}
-        <motion.div
-          className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex gap-2"
-          animate={{
-            y: [-5, 5, -5],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        >
-          <motion.div 
-            className="w-2 h-2 rounded-full bg-blue-500/20"
-            whileHover={{ scale: 1.5, backgroundColor: "rgba(59,130,246,0.4)" }}
-          />
-          <motion.div 
-            className="w-2 h-2 rounded-full bg-blue-500/20"
-            whileHover={{ scale: 1.5, backgroundColor: "rgba(59,130,246,0.4)" }}
-          />
-          <motion.div 
-            className="w-2 h-2 rounded-full bg-blue-500/20"
-            whileHover={{ scale: 1.5, backgroundColor: "rgba(59,130,246,0.4)" }}
           />
         </motion.div>
       </motion.div>
