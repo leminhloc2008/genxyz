@@ -2,7 +2,6 @@
 // app/page.tsx
 "use client";
 
-import { useRef } from "react";
 import { motion, useViewportScroll, useSpring } from "framer-motion";
 import { AnimatedCursor } from "@/components/ui/AnimatedCursor";
 import { HeroSection } from "@/components/layout/HeroSection";
@@ -11,9 +10,6 @@ import { KeyFeatures } from "@/components/features/KeyFeatures";
 import { FeatureShowcase } from "@/components/features/FeatureShowcase";
 import { ScrollingFeatures } from "@/components/features/ScrollingFeatures";
 import { SurveyDashboard } from "@/components/survey/SurveyDashboard";
-import { FinalProductShowcase } from "@/components/features/FinalProductShowcase";
-import { CallToAction } from "@/components/layout/CallToAction";
-import { AppInterface } from "@/components/layout/AppInterface";
 import { OverlaySectionDivider } from "@/components/layout/OverlaySectionDivider";
 import { TransitionCurve } from "@/components/layout/TransitionCurve";
 import { FeatureSection } from "@/components/features/FeatureSection";
@@ -25,7 +21,6 @@ import FullMockup from '@/components/Mockups/Fullmockup1';
 import Image from 'next/image';
 
 export default function LandingPage() {
-  const scrollRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useViewportScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,

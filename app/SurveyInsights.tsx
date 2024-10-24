@@ -1,8 +1,8 @@
 /* eslint-disable padded-blocks */
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Book, Users, Globe, ArrowRight, ChevronRight, PieChart as PieChartIcon, BarChart as BarChartIcon, Target } from 'lucide-react';
-import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, LineChart, Line } from 'recharts';
+import { PieChart as PieChartIcon, BarChart as BarChartIcon } from 'lucide-react';
+import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
 
 export default function Component() {
   // Using your actual survey data
@@ -16,13 +16,6 @@ export default function Component() {
     { name: 'Gen Z', difficulty: 83.33 },
     { name: 'Gen Y', difficulty: 66.67 },
     { name: 'Gen X', difficulty: 100 },
-  ];
-
-  const topImpacts = [
-    { name: 'Feeling isolated or misunderstood', percentage: 47.37 },
-    { name: 'Difficulty collaborating with colleagues', percentage: 36.84 },
-    { name: 'Causing family conflicts', percentage: 31.58 },
-    { name: 'Affecting work performance', percentage: 26.32 },
   ];
 
   const COLORS = ['#3B82F6', '#8B5CF6', '#EC4899', '#6366F1'];

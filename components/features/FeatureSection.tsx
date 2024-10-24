@@ -1,3 +1,5 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 import React from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { CheckCircle } from 'lucide-react'
