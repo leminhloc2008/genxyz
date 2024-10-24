@@ -116,7 +116,7 @@ export function ImpactAreasSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="bg-white p-8 rounded-3xl shadow-lg">
+          <div className="bg-gray-900 p-8 rounded-3xl shadow-lg">
             <motion.div 
               className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6"
               animate={{ 
@@ -131,10 +131,10 @@ export function ImpactAreasSection() {
             >
               <Target className="w-8 h-8 text-white" />
             </motion.div>
-            <h4 className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+            <h4 className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
               Our Commitment
             </h4>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               While we acknowledge that no single app can completely bridge the generation gap, 
               our data shows that {topImpacts[0].percentage}% of users feel isolated or misunderstood. 
               We're committed to addressing these challenges through our comprehensive platform that 

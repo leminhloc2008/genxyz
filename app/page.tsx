@@ -13,8 +13,10 @@ import { SurveyDashboard } from "@/components/survey/SurveyDashboard";
 import { OverlaySectionDivider } from "@/components/layout/OverlaySectionDivider";
 import { TransitionCurve } from "@/components/layout/TransitionCurve";
 import { FeatureSection } from "@/components/features/FeatureSection";
+import { Credits } from "@/components/final";
 import { WireframeSection } from "@/components/WireframeSection";
 import { ImpactAreasSection } from "@/components/layout/ImpactAreasSection";
+import { USPSection } from "@/components/features/ussps";
 import SurveyInsights from '@/app/SurveyInsights';
 import CompetitorAnalysis from '@/app/CompetitorAnalysis';
 import FullMockup from '@/components/Mockups/Fullmockup1';
@@ -65,6 +67,31 @@ export default function LandingPage() {
         <section className="bg-white text-gray-900">
           <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8"> {/* Increased max width */}
             <div className="space-y-32 py-20">
+              <motion.div 
+                className="text-center mb-4" // Much smaller margin
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <motion.div
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="inline-block"
+                >
+                  <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
+                    RESEARCH & ANALYSIS
+                  </div>
+                </motion.div>
+                <h2 className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600">
+                  Problem Statement
+                </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 mx-auto rounded-full" />
+              </motion.div>
+
+
               <SurveyInsights />
               <OverlaySectionDivider />
               <div className="relative z-20">
@@ -84,9 +111,97 @@ export default function LandingPage() {
         {/* Light Theme Sections - Data & Survey */}
         <section className="bg-[#0c0f1a]  text-white">
           <div className="space-y-32 py-20">
+                <motion.div 
+                  className="text-center mb-20" // Space before Key Features
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                >
+                  {/* Floating Elements */}
+                  <motion.div
+                    className="absolute -top-20 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      opacity: [0.1, 0.3, 0.1]
+                    }}
+                    transition={{ 
+                      duration: 8,
+                      repeat: Infinity,
+                      repeatType: "reverse"
+                    }}
+                  />
+                  <motion.div
+                    className="absolute -bottom-20 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+                    animate={{ 
+                      scale: [1.2, 1, 1.2],
+                      opacity: [0.1, 0.3, 0.1]
+                    }}
+                    transition={{ 
+                      duration: 8,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      delay: 1
+                    }}
+                  />
+
+                  {/* Main Content */}
+                  <motion.div
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="inline-block"
+                  >
+                    <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 text-white px-8 py-3 rounded-full text-sm font-semibold mb-6">
+                      THE SOLUTION
+                    </div>
+                  </motion.div>
+
+                  <motion.h2
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-white to-purple-500"
+                  >
+                    Our Approach
+                  </motion.h2>
+
+                  {/* Animated Line */}
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100px" }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 mx-auto rounded-full"
+                  />
+
+                  {/* Animated Dots */}
+                  <div className="flex justify-center gap-2 mt-6">
+                    {[...Array(3)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        className="w-2 h-2 rounded-full bg-blue-500/50"
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ 
+                          duration: 0.4,
+                          delay: 0.6 + (i * 0.1),
+                          type: "spring",
+                          bounce: 0.5
+                        }}
+                      />
+                    ))}
+                  </div>
+                </motion.div>
+
+
                 <KeyFeatures />
                 <ImpactAreasSection />
-
+                <USPSection />
+                <WireframeSection />
 
                 {/* Design System Section */}
                 <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
@@ -236,22 +351,17 @@ export default function LandingPage() {
 
 
                 <div className="relative -mx-4"> {/* Adjusted container for FeatureShowcase */}
-                  <WireframeSection />
+                  
                   <FeatureSection />
                   <FeatureShowcase />
                 </div>
                 <ScrollingFeatures />
+                <Credits />
           </div>
         </section>
 
 
-        {/* Final Dark Sections */}
-        <section className="bg-black text-white relative"> {/* Added text-white */}
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="space-y-32 py-20">
-            </div>
-          </div>
-        </section>
+        
       </main>
     </div>
   );

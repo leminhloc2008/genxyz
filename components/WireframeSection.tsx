@@ -6,33 +6,33 @@ import Image from 'next/image'
 
 const wireframeBlocks = [
   {
-    title: "Light Mode Interface",
-    description: "Clean and minimalist design for optimal readability in well-lit environments.",
-    image: "/assets/Translation.png",
-    features: [
+    "title": "Direct users to the translation features, instead of their profile",
+    "description": "Clean and minimalist design for optimal readability in well-lit environments.",
+    "image": "/assets/Translation.png",
+    "features": [
       "Crisp, clear typography",
       "Intuitive layout",
       "Easy-to-use input field"
     ]
   },
   {
-    title: "Dark Mode Experience",
-    description: "Sleek dark theme for comfortable viewing in low-light conditions.",
-    image: "/assets/Prompt.png",
+    title: "Suggested prompts are available when accessing Gen AI",
+    description: "Enhanced chatbot interaction with preset prompts for efficient communication.",
+    image: "/assets/GenAI_Prompts.png",
     features: [
-      "Eye-friendly color scheme",
-      "Vibrant accent colors",
-      "Customizable AI avatar"
+      "Preset prompts based on user generation",
+      "Detailed questions for direct interaction",
+      "Time-saving, efficient AI chat interface"
     ]
   },
   {
-    title: "Seamless Mode Transition",
-    description: "Effortless switching between light and dark modes for personalized user experience.",
-    image: "/assets/SlangsW.png",
+    title: "Build a system of outstanding slangs and insights, with quick trends at the top of each page",
+    description: "Revamped design to showcase slangs and insights with an innovative approach, providing easy access to trending content.",
+    image: "/assets/Slangs_Insights.png",
     features: [
-      "Smooth animation",
-      "Persistent layout",
-      "Adaptive UI elements"
+      "Engaging layout for slangs and insights",
+      "Trending topics integrated at the top of each page",
+      "Quick access to fresh content"
     ]
   }
 ];

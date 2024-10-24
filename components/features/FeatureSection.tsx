@@ -39,25 +39,35 @@ export function FeatureSection(): JSX.Element {
       <div className="max-w-[1920px] mx-auto px-6 lg:px-24 py-24 space-y-48">
         {/* First Two Features */}
         <FeatureBlock
-          title="App Feature Title"
-          description="Skibidi toilet yapping fanum tax diddy drake kanye west ligma ball sigma sigma on the wall who the skibidiees of tehm all"
+          title="Hall of Slangs"
+          description="Never run out of new & old slangs with Hall of Slangs!"
           videoSrc="/assets/Slangs.mov"
           benefits={[
-            "Key benefit or feature point one goes here",
-            "Key benefit or feature point two goes here"
+            "Fresh & trendy slangs selected by us are waiting for you to discover",
+            "Organize in a way that you can find what you need"
           ]}
           videoOnLeft={true}
         />
-
+        
         <FeatureBlock
-          title="Another Amazing Feature"
-          description="Skibidi toilet yapping fanum tax diddy drake kanye west ligma ball sigma sigma on the wall who the skibidiees of tehm all"
+          title="Translation"
+          description="Don’t know that slang? We got you!"
           videoSrc="/assets/Translation.mov"
           benefits={[
-            "Additional benefit or feature point one",
-            "Additional benefit or feature point two"
+            "Live translate the slang that you suddenly hear from others",
+            "Updating new slangs continuously, and alert feature to protect you from sensitive slang"
           ]}
           videoOnLeft={false}
+        />
+
+        <FeatureBlock
+          title="Botto - GEN AI"
+          description="Understanding other Generations’ tone in a new way!"
+          videoSrc="/assets/Botto(Gen AI).mov"
+          benefits={[
+            "Convert daily sentences into other generations’ tones so that you can understand their vibes and impress them!"
+          ]}
+          videoOnLeft={true}
         />
 
         {/* First Mockup */}
@@ -65,41 +75,32 @@ export function FeatureSection(): JSX.Element {
 
         {/* Next Two Features */}
         <FeatureBlock
-          title="Another Amazing Feature"
-          description="Skibidi toilet yapping fanum tax diddy drake kanye west ligma ball sigma sigma on the wall who the skibidiees of tehm all"
+          title="Batta - GEN AI"
+          description="Your burning questions about generations are now solved! "
           videoSrc="/assets/GENAI.mov"
           benefits={[
-            "Additional benefit or feature point one",
-            "Additional benefit or feature point two"
-          ]}
-          videoOnLeft={true}
-        />
-
-        <FeatureBlock
-          title="Another Amazing Feature"
-          description="Skibidi toilet yapping fanum tax diddy drake kanye west ligma ball sigma sigma on the wall who the skibidiees of tehm all"
-          videoSrc="/assets/Botto(Gen AI).mov"
-          benefits={[
-            "Additional benefit or feature point one",
-            "Additional benefit or feature point two"
+            "Have a whole view of 1 question with 3 generation-presets (X, Y, and Z)",
+            "Daily given prompts help you gain more insights that you’ve never expected!"
           ]}
           videoOnLeft={false}
         />
+
 
         {/* Second Mockup */}
         <MockupShowcase imageUrl={mockupImages[1]} reverse={true} />
 
         {/* Final Feature */}
         <FeatureBlock
-          title="Another Amazing Feature"
-          description="Skibidi toilet yapping fanum tax diddy drake kanye west ligma ball sigma sigma on the wall who the skibidiees of tehm all"
+          title="Generation Insights"
+          description="An insight into the generations? We have what you need!!"
           videoSrc="/assets/Insights.mov"
           benefits={[
-            "Additional benefit or feature point one",
-            "Additional benefit or feature point two"
+            "Provides deeper insights into the styles, lifestyles and personalities of generations from general to detailed",
+            "Organize and divide information clearly and intuitively"
           ]}
           videoOnLeft={true}
         />
+        
 
         {/* Final Mockup */}
         <MockupShowcase imageUrl={mockupImages[2]} />
@@ -115,7 +116,7 @@ function MockupShowcase({ imageUrl, reverse = false }: MockupShowcaseProps): JSX
     offset: ["start end", "end start"]
   });
 
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [2.4, 3, 2.4]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1.344, 1.68, 1.344]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 1, 0.3]);
   const rotateY = useTransform(scrollYProgress, [0, 0.5, 1], [-15, 0, 15]);
   const translateY = useTransform(scrollYProgress, [0, 0.5, 1], [100, 0, -100]);
