@@ -194,12 +194,86 @@ export default function LandingPage() {
                     ))}
                   </div>
                 </motion.div>
-
-
-                <KeyFeatures />
+               
                 <ImpactAreasSection />
+                <KeyFeatures />
                 <USPSection />
                 <WireframeSection />
+                
+                <div className="relative z-10">
+                  {/* Header Section */}
+                  <div className="text-center mb-16">
+                    <motion.h2 
+                      className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
+                    >
+                      Wireframe
+                    </motion.h2>
+                  </div>
+
+                  {/* Image Container */}
+                  <motion.div 
+                    className="relative w-full h-[900px] rounded-3xl overflow-hidden shadow-2xl"
+                    initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    {/* Floating Elements */}
+                    <motion.div
+                      className="absolute -top-10 right-10 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl z-10"
+                      animate={{ 
+                        y: [-20, 20, -20],
+                        opacity: [0.5, 0.8, 0.5]
+                      }}
+                      transition={{ 
+                        duration: 5,
+                        repeat: Infinity,
+                        repeatType: "reverse"
+                      }}
+                    />
+                    
+                    <motion.div
+                      className="absolute -bottom-10 left-10 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl z-10"
+                      animate={{ 
+                        y: [20, -20, 20],
+                        opacity: [0.5, 0.8, 0.5]
+                      }}
+                      transition={{ 
+                        duration: 5,
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                        delay: 1
+                      }}
+                    />
+
+                    {/* Main Image */}
+                    <Image
+                      src="/assets/ALL.png"
+                      alt="Design System"
+                      layout="fill"
+                      objectFit="contain"
+                      className="rounded-3xl"
+                      priority
+                    />
+
+                    {/* Gradient Overlays */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/10" />
+                    
+                    {/* Interactive Hover Effect */}
+                    <motion.div 
+                      className="absolute inset-0 bg-blue-500/0 transition-colors duration-300"
+                      whileHover={{ backgroundColor: 'rgba(59, 130, 246, 0.05)' }}
+                    />
+                  </motion.div>
+                </div>
+
+
 
                 {/* Design System Section */}
                 <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
