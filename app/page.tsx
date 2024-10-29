@@ -1,5 +1,3 @@
-/* eslint-disable padded-blocks */
-// app/page.tsx
 "use client";
 
 import { motion, useViewportScroll, useSpring } from "framer-motion";

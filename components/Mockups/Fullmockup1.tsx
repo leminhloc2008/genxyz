@@ -28,6 +28,7 @@ export default function FullMockup() {
               fill
               className="object-cover rounded-xl shadow-2xl"
               style={{ backgroundColor: 'transparent' }}
+              unoptimized={true}
             />
             
             {/* Gradient overlay */}

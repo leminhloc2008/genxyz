@@ -18,7 +18,7 @@ const wireframeBlocks = [
   {
     title: "Suggested prompts are available when accessing Gen AI",
     description: "Enhanced chatbot interaction with preset prompts for efficient communication.",
-    image: "/assets/GenAI_Prompts.png",
+    image: "/assets/Prompt.png",
     features: [
       "Preset prompts based on user generation",
       "Detailed questions for direct interaction",
@@ -28,7 +28,7 @@ const wireframeBlocks = [
   {
     title: "Build a system of outstanding slangs and insights, with quick trends at the top of each page",
     description: "Revamped design to showcase slangs and insights with an innovative approach, providing easy access to trending content.",
-    image: "/assets/Slangs_Insights.png",
+    image: "/assets/SlangsW.png",
     features: [
       "Engaging layout for slangs and insights",
       "Trending topics integrated at the top of each page",

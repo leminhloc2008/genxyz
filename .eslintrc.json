@@ -7,6 +7,7 @@
     "react/no-unescaped-entities": "off"
   },
   "parserOptions": {
+    "parser": "@typescript-eslint/parser",
     "project": "./tsconfig.json"
   }
 }
