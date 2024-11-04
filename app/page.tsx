@@ -198,8 +198,7 @@ export default function LandingPage() {
                 <ImpactAreasSection />
                 <KeyFeatures />
                 <USPSection />
-                <WireframeSection />
-                
+
                 <div className="relative z-10">
                   {/* Header Section */}
                   <div className="text-center mb-16">
@@ -273,7 +272,7 @@ export default function LandingPage() {
                   </motion.div>
                 </div>
 
-
+                {/* Fuck this shit */}
 
                 {/* Design System Section */}
                 <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
@@ -421,6 +420,11 @@ export default function LandingPage() {
                   </motion.div>
                 </div>
 
+
+
+                <WireframeSection />
+                
+                
 
                 <div className="relative -mx-4"> {/* Adjusted container for FeatureShowcase */}
                   
